@@ -8,13 +8,14 @@ import React from "react";
 // import { AiOutlineEdit } from "react-icons/ai";
 // import { BsInfocircle } from "react-icons/bs";
 // import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
-// import { Button } from 'react-bootstrap';
-
-
-import logo from '../../public/img/logo.jpg';
+import {Button, Form, InputGroup } from 'react-bootstrap';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./styles.css";
-
+import Header from "../../components/Header/header.jsx";
+import Footer from "../../components/Footer/footer.jsx"
+import img from "../../public/img/Capture.PNG";
 const Home = () => {
+    // const img = "../../public/img/3.png";
     // const navigate = useNavigate();
     // const handleLogin = () => {
     //     navigate('/sign_in');
@@ -34,46 +35,38 @@ const Home = () => {
     //   }, []);
     
     return (
-        <header className="header">
-            <nav>
-                <div className="logo">
-                   <img src={logo} alt="Logo"/>
+        <div>
+            <Header/>
+            {/* Main */}
+            <main className="">
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="inputGroup-sizing-default">
+                        Locaiton
+                    </InputGroup.Text>
+                    <Form.Control aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+                    <Button className="search"> Search </Button>
+                </InputGroup>
+                
+                <div className="suggestions">
+                    <Form.Label htmlFor="basic-url"> Suggestions for you </Form.Label>
+                    <Button variant="dark"> Java </Button>
+                    <Button variant="dark"> ReactJS </Button>
+                    <Button variant="dark"> .NET </Button>
+                    <Button variant="dark"> Tester </Button>
+                    <Button variant="dark"> PHP </Button>
+                    <Button variant="dark"> Business Analyst </Button>
+                    <Button variant="dark"> NodeJS </Button>
+                    <Button variant="dark"> Manager </Button>
+                    <Button variant="dark"> Flutter </Button>
+                    <Button variant="dark"> Security </Button>
                 </div>
-                <ul className="menu">
-                    <li> <span> All Jobs </span> 
-                        <ul className="submenu">
-                            <li>
-                                <span> Job by  </span>
-                                <ul className="submenu2">
-                                    <li><span> PHP </span></li>
-                                    <li><span> Java </span></li>
-                                    <li><span> Javascript </span></li>
-                                    <li><span> Laravel </span></li>
-                                    <li><span> Spring </span></li>
-                                    <li><span> NodeJS </span></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span> Job by title </span>
-                            </li>
-                            <li>
-                                <span> Job by company </span>
-                            </li>
-                            <li>
-                                <span> Job by City </span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li> <span> IT Companies </span> </li>
-                    <li> <span> Blog </span> </li>
-                    <li> <span> Others </span> </li>
-                </ul>
-                <div className="account">
-                    <div> For Employer </div>
-                    <div> Sign in/Sign up </div>
-                </div>
-            </nav>
-        </header>
+                
+            </main>
+            <div className="d-flex justify-content-center mt-5">
+                <img className="img-change" src={img} alt=""/>
+            </div>
+            <Footer/>
+        </div>
         // <div className="container">
         //     <header>
         //         <div className="logo">

@@ -1,8 +1,8 @@
-import {TopSide} from "../components/Layout"
+
 
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
-
+import Signup from "../pages/Signup";
 import NotFoundPage from "../pages/NotFoundPage";
 import Profile from "../pages/Profile";
 import Upload from "../pages/Upload";
@@ -11,11 +11,17 @@ export const routes = [
     {
         path: "/",
         component: Home,
+
         //isShowHeader: true
     },
     {
-        path: "/sign_in",
+        path: "/signin",
         component: Signin,
+        //isShowHeader: true
+    },
+    {
+        path: "/signup",
+        component: Signup,
         //isShowHeader: true
     },
     {
@@ -32,7 +38,7 @@ export const routes = [
     {
         path: "/upload",
         component : Upload,
-        layout: TopSide
+        layout: null,
         // isShowHeader: true
     }
 ];
